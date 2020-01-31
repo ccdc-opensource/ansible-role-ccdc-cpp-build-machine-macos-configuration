@@ -1,0 +1,69 @@
+---
+- name: Disable animations
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticWindowAnimationsEnabled
+    type: bool
+    value: false
+    state: present
+  notify:
+    - Restart Finder
+
+- name: Resize windows without delay
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: NSWindowResizeTime
+    type: float
+    value: 0.001
+    state: present
+  notify:
+    - Restart Finder
+
+- name: Instant dock resizing
+  osx_defaults:
+    domain: com.apple.dock
+    key: expose-animation-duration
+    type: int
+    value: 0
+    state: present
+  notify:
+    - Restart Finder
+
+- name: No bouncy icons in dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: launchanim
+    type: bool
+    value: false
+    state: present
+  notify:
+    - Restart Finder
+
+- name: Disable the Screensaver
+  osx_defaults:
+    domain: com.apple.screensaver
+    key: idleTime
+    type: int
+    value: 0
+    state: present
+  notify:
+    - Restart Finder
+
+- name: don't prompt on new drives for timemachine
+  osx_defaults:
+    domain: com.apple.TimeMachine
+    key: DoNotOfferNewDisksForBackup
+    type: bool
+    value: true
+    state: present
+  notify:
+    - Restart Finder
+
+- name: show info in login screen
+  become: yes
+  osx_defaults:
+    domain: /Library/Preferences/com.apple.loginwindow
+    key: AdminHostInfo
+    type: string
+    value: HostName
+    state: present

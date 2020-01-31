@@ -1,0 +1,15 @@
+---
+- name: stop mac from sleeping
+  include: never-sleep.yml
+
+- name: stop automatic updates, we decide when
+  include: disable-autoupdates.yml
+
+- name: setup desktop defaults that increase speed
+  include: defaults-for-build-machine-speed.yml
+
+- name: disable spotlight searching
+  include: disable-spotlight.yml
+
+- name: clear the dock
+  include: clear-the-dock.yml

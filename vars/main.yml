@@ -1,0 +1,30 @@
+---
+dockitems_remove_all: true
+
+dockitems_enabled_pre_10_15:
+  - name: Terminal
+    path: "/Applications/Utilities/Terminal.app"
+    pos: 1
+  - name: Activity Monitor
+    path: "/Applications/Utilities/Activity Monitor.app"
+    pos: 2
+  - name: Console
+    path: "/Applications/Utilities/Console.app"
+    pos: 3
+  - name: System Preferences
+    path: "/Applications/System Preferences.app"
+    pos: 4
+
+dockitems_enabled_post_10_15:
+  - name: Terminal
+    path: "/System/Applications/Utilities/Terminal.app"
+    pos: 1
+  - name: Activity Monitor
+    path: "/System/Applications/Utilities/Activity Monitor.app"
+    pos: 2
+  - name: Console
+    path: "/System/Applications/Utilities/Console.app"
+    pos: 3
+  - name: System Preferences
+    path: "/System/Applications/System Preferences.app"
+    pos: 4
