@@ -60,7 +60,7 @@
     - Restart Finder
 
 - name: show info in login screen
-  become: yes
+  become: true
   osx_defaults:
     domain: /Library/Preferences/com.apple.loginwindow
     key: AdminHostInfo

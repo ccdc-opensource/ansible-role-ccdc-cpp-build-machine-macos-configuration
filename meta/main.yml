@@ -1,17 +1,17 @@
 ---
-    dependencies: []
-    
-    galaxy_info:
-      role_name: cpp_build_machine_macos_configuration
-      author: rockdreamer
-      description: Configuration for CCDC macOS build machines.
-      company: The Cambridge Crystallographic Data Centre
-      license: "license (BSD, MIT)"
-      min_ansible_version: 2.9
-      platforms:
-        - name: Darwin
-          versions:
-            - all
-      galaxy_tags:
-        - system
-    
+dependencies: []
+
+galaxy_info:
+  role_name: cpp_build_machine_macos_configuration
+  namespace: ccdc
+  author: rockdreamer
+  description: Configuration for CCDC MacOS build machines.
+  company: The Cambridge Crystallographic Data Centre
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.9
+  platforms:
+    - name: MacOSX
+      versions:
+        - all
+  galaxy_tags:
+    - system
