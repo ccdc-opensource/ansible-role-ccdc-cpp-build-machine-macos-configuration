@@ -1,20 +1,20 @@
 ---
-- name: Disable constant indexing by spotlight
+- name: Disable constant indexing by spotlight # noqa: no-changed-when
   command: mdutil -i off /
-  ignore_errors: true
+  ignore_errors: true # noqa: ignore-errors
   become: true
 
-- name: kill all spotlight indexers
+- name: kill all spotlight indexers # noqa: no-changed-when
   command: killall mds
-  ignore_errors: true
+  ignore_errors: true # noqa: ignore-errors
   become: true
 
-- name: rebuild spotlight index
+- name: rebuild spotlight index # noqa: no-changed-when
   command: mdutil -E
-  ignore_errors: true
+  ignore_errors: true # noqa: ignore-errors
   become: true
 
-- name: Disable constant indexing by spotlight
+- name: Disable constant indexing by spotlight # noqa: no-changed-when
   command: mdutil -i off /
-  ignore_errors: true
+  ignore_errors: true # noqa: ignore-errors
   become: true

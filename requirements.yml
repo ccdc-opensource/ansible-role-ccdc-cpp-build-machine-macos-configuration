@@ -1,3 +1,5 @@
 ---
-  - src: https://github.com/feffi/ansible-macos-standby.git
-    name: feffi.macos-standby
+- src: https://github.com/feffi/ansible-macos-standby.git
+  name: feffi.macos-standby
+- src: https://github.com/feffi/ansible-macos-defaults.git
+  name: feffi.macos-defaults
