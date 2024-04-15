@@ -9,7 +9,7 @@
     - pmset -a hibernatemode 0
     - pmset disablesleep 1
     #  Not sure the stuff below works
-    - systemsetup -setsleep Never 
+    - systemsetup -setsleep Never
     - systemsetup -setharddisksleep Never
     - systemsetup -setcomputersleep Never
     - systemsetup -setdisplaysleep Never
