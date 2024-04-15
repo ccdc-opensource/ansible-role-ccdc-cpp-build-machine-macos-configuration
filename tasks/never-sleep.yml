@@ -2,13 +2,13 @@
 - name: Never Sleep Mode
   command: "{{ item }}"
   with_items:
-    - pmset -a standbydelay 0  
+    - pmset -a standbydelay 0
     - pmset -a displaysleep 0
     - pmset -a disablesleep 1
     - pmset -a disksleep 0
     - pmset -a hibernatemode 0
     - pmset disablesleep 1
-    # Not sure the stuff below works 
+    #  Not sure the stuff below works 
     - systemsetup -setsleep Never 
     - systemsetup -setharddisksleep Never
     - systemsetup -setcomputersleep Never
