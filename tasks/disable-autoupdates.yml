@@ -1,5 +1,5 @@
 ---
 - name: Disable automatic updates
-  command: softwareupdate --schedule off
+  ansible.builtin.command: softwareupdate --schedule off
   changed_when: false
   become: true

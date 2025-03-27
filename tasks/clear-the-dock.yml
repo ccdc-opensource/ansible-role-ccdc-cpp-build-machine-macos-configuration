@@ -1,16 +1,16 @@
 ---
 - name: Use /Applications for MacOS < 10.15
-  set_fact:
+  ansible.builtin.set_fact:
     dockitems_enabled: "{{ dockitems_enabled_pre_10_15 }}"
   when: ansible_distribution_version is version('10.15', '<')
 
 - name: Use /System/Applications for MacOS >= 10.15
-  set_fact:
+  ansible.builtin.set_fact:
     dockitems_enabled: "{{ dockitems_enabled_post_10_15 }}"
   when: ansible_distribution_version is version('10.15', '>=')
 
 - name: clear the dock
-  include_role:
+  ansible.builtin.include_role:
     name: fubarhouse.macdock
   vars:
     dockutil_url: https://raw.githubusercontent.com/kcrawford/dockutil/2.0.5/scripts/dockutil

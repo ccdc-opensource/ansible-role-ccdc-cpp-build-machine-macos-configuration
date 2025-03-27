@@ -1,20 +1,20 @@
 ---
 - name: Disable constant indexing by spotlight # noqa: no-changed-when
-  command: mdutil -i off /
+  ansible.builtin.command: mdutil -i off /
   ignore_errors: true # noqa: ignore-errors
   become: true
 
 - name: kill all spotlight indexers # noqa: no-changed-when
-  command: killall mds
+  ansible.builtin.command: killall mds
   ignore_errors: true # noqa: ignore-errors
   become: true
 
 - name: rebuild spotlight index # noqa: no-changed-when
-  command: mdutil -E
+  ansible.builtin.command: mdutil -E
   ignore_errors: true # noqa: ignore-errors
   become: true
 
 - name: Disable constant indexing by spotlight # noqa: no-changed-when
-  command: mdutil -i off /
+  ansible.builtin.command: mdutil -i off /
   ignore_errors: true # noqa: ignore-errors
   become: true
